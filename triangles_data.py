@@ -20,6 +20,6 @@ def load_data():
     distances = np.array([[0, 3, 4], [3, 0, 5], [4, 5, 0]])
     tuple_points = [(x1, y1), (x2, y2), (x3, y3)]
     starting_tuple_points = [(x1, y1), (x2, y2), (x3, y3)]
-    labels = ["Point 1", "Point 2", "Point 3", "Point 4", "Point 5"]
+    labels = ["Point 1", "Point 2", "Point 3"]
 
-    return   distances, starting_tuple_points, tuple_points, labels
+    return distances, starting_tuple_points, tuple_points, labels
