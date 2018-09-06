@@ -6,6 +6,7 @@ from utils import function_cost, argmin_dych, distance, numerical_gradient_eleme
 from triangles_data import load_data as t_load_data
 from cities_data import load_data as c_load_data
 from embeddings_data import load_data as e_load_data
+from line_data import load_data as l_load_data
 
 
 ALPHA_COLOR_STARTING_POINTS_VALUE = 0.1
