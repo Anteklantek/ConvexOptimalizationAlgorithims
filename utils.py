@@ -3,7 +3,6 @@ import math as m
 
 import numpy as np
 
-
 NUMERICAL_GRADIENT_DELTA = 0.00000000000001
 DYCH_LEFT = 0.0000000000000000001
 DYCH_RIGHT = 20
@@ -47,14 +46,14 @@ def numerical_gradient_element(tuple_points_arg, elem_index, x_or_y, distances):
     new_tuple_points_right = tuple_points_arg.copy()
     if x_or_y == 0:
         new_tuple_points_left[elem_index] = (
-        new_tuple_points_left[elem_index][0] - delta, new_tuple_points_left[elem_index][1])
+            new_tuple_points_left[elem_index][0] - delta, new_tuple_points_left[elem_index][1])
         new_tuple_points_right[elem_index] = (
-        new_tuple_points_right[elem_index][0] + delta, new_tuple_points_right[elem_index][1])
+            new_tuple_points_right[elem_index][0] + delta, new_tuple_points_right[elem_index][1])
     if x_or_y == 1:
         new_tuple_points_left[elem_index] = (
-        new_tuple_points_left[elem_index][0], new_tuple_points_left[elem_index][1] - delta)
+            new_tuple_points_left[elem_index][0], new_tuple_points_left[elem_index][1] - delta)
         new_tuple_points_right[elem_index] = (
-        new_tuple_points_right[elem_index][0], new_tuple_points_right[elem_index][1] + delta)
+            new_tuple_points_right[elem_index][0], new_tuple_points_right[elem_index][1] + delta)
 
     function_cost_left = function_cost(new_tuple_points_left, distances)
     function_cost_right = function_cost(new_tuple_points_right, distances)

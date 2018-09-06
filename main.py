@@ -4,20 +4,23 @@ import matplotlib.pyplot as plt
 from utils import function_cost, argmin_dych, distance, numerical_gradient_element, calculate_gradient, \
     perform_one_step_towards_gradient
 from triangles_data import load_data as t_load_data
+from cities_data import load_data as c_load_data
+from embeddings_data import load_data as e_load_data
+
 
 ALPHA_COLOR_STARTING_POINTS_VALUE = 0.1
 
-NUMBER_OF_ITERATIONS = 20
+NUMBER_OF_ITERATIONS = 500
 
 ALPHA_CAUCHY = True
-NUMBER_OF_DYCH_ITERATIONS = 10
+NUMBER_OF_DYCH_ITERATIONS = 30
 
 ALPHA_SQRT = False
 
 ALPHA_CONST_STEP = False
 ALPHA_STEP_SIZE = 0.0005
 
-distances, tuple_points, starting_tuple_points, labels = t_load_data()
+distances, tuple_points, starting_tuple_points, labels = e_load_data()
 
 gradient = calculate_gradient(tuple_points, distances)
 
